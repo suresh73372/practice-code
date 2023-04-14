@@ -29,7 +29,7 @@ const App = () =>{
   
    <input type="password" placeholder=" ENTER PASSWORD" name="password" value={password} onChange={handler} /><br/><br/>
 
-    <button>submit</button>
+    {/* <input type="submit" value="submit" name="add"/> */}
  </form>
  </div>
   </>
