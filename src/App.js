@@ -1,43 +1,16 @@
-import React,{useState} from "react";
+import React,{useState} from "react"
 
 const App = () =>{
- const [count,setCount] = useState(0);
+  const [data, setData] = useState(false);
 
- const Increment = () =>{
-  setCount((value)=>{
-    return value + 1
-  })
-  setCount((value)=> value + 1)
- }
-
- const Decrement = () =>{
-  setCount((value)=> value - 1)
-  setCount((value)=> value - 1)
- }
-
-
-
-
-
-return(
-  <>
-  <div style={{textAlign:"center"}}>
-<button onClick={Decrement}>-</button>
-<span>ORDER:{count}</span>
-<button onClick={Increment}>+</button>
-</div>
-  </>
-)
-
-
+  const changeHandler = () =>{
+    setData(!data)
+  }
+  return(
+    <>
+    <button onClick={changeHandler}>{data ? "show" : "hide"}</button>
+{data && <h3>conditional rendering here</h3>}
+    </>
+  )
 }
 export default App
-
-
-
-
-{/* <div style={{textAlign:"center"}}>
-<button onClick={()=>{setCount(count - 1)}}>-</button>
-<span>ORDER:{count}</span>
-<button onClick={()=>{setCount(count + 1)}}>+</button>
-</div> */}
